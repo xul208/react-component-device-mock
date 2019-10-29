@@ -1,0 +1,244 @@
+.mock {
+	position: relative;
+}
+.device {
+	margin: auto;
+}
+.device .row {
+	display: flex;
+}
+.device-content {
+	overflow: hidden;
+}
+.slide .deviceIcon {
+	display: none;
+}
+.legend {
+	z-index: 2;
+}
+.pillWrap {
+	-webkit-font-smoothing: antialiased;
+	background-color: rgb(255, 255, 255);
+	border-bottom-left-radius: 32px;
+	border-bottom-right-radius: 32px;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
+	color: rgb(0, 0, 0);
+	cursor: pointer;
+	display: inline-block;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	height: 50px;
+	line-height: 28px;
+	max-width: 300px;
+	padding-bottom: 0px;
+	padding-left: 24px;
+	padding-right: 44px;
+	padding-top: 0px;
+	position: absolute;
+	top: 50%;
+	left: calc(50% - 100px);
+}
+
+.geoPill {
+	-webkit-font-smoothing: antialiased;
+	background-color: rgb(255, 255, 255);
+	border-bottom-left-radius: 32px;
+	border-bottom-right-radius: 32px;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
+	color: rgb(51, 51, 51);
+	cursor: pointer;
+	display: inline-block;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	height: 50px;
+	line-height: 28px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	max-width: 300px;
+	padding-bottom: 0px;
+	padding-left: 24px;
+	padding-right: 44px;
+	padding-top: 0px;
+	position: relative;
+	width: 117.328125px;
+}
+.profile {
+	-webkit-font-smoothing: antialiased;
+	bottom: 34px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	height: 31px;
+	margin-right: -512px;
+	padding-bottom: 0px;
+	padding-left: 50px;
+	padding-right: 0px;
+	padding-top: 8px;
+	position: absolute;
+	right: 532.5px;
+	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px,
+		rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
+	width: 268.890625px;
+}
+.hero {
+	width: 100%;
+	max-height: 250px;
+}
+.avatar {
+	-webkit-font-smoothing: antialiased;
+	border-bottom-color: rgb(255, 255, 255);
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	border-left-color: rgb(255, 255, 255);
+	border-left-style: none;
+	border-left-width: 0px;
+	border-right-color: rgb(255, 255, 255);
+	border-right-style: none;
+	border-right-width: 0px;
+	border-top-color: rgb(255, 255, 255);
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	border-top-style: none;
+	border-top-width: 0px;
+	box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	height: 42px;
+	left: 0px;
+	position: absolute;
+	margin-top: 5px;
+	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px,
+		rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
+	top: -2px;
+	width: 42px;
+}
+.pillText {
+	-webkit-font-smoothing: antialiased;
+	color: rgb(0, 0, 0);
+	cursor: pointer;
+	display: inline-block;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.chevronMock::before {
+	border-style: solid;
+	border-width: 0.15em 0.15em 0 0;
+	content: "";
+	display: inline-block;
+	height: 0.5em;
+	left: 0.5em;
+	position: relative;
+	top: 0.25em;
+	transform: rotate(-45deg);
+	vertical-align: super;
+	width: 0.5em;
+	color: rgb(0, 166, 128);
+}
+
+.chevronMock.bottom:before {
+	transform: rotate(135deg);
+}
+.extLinkIcon {
+	border-radius: 10px;
+	background: rgb(0, 156, 128);
+}
+.sponsoredBy {
+	font-weight: normal;
+	text-align: left;
+}
+.sprMore {
+	margin-left: 0.25em;
+	font-weight: normal;
+	text-decoration: underline;
+}
+.heroSpr {
+	float: left;
+}
+.geoPin {
+	position: absolute;
+	left: 0.5em;
+	bottom: 0.5em;
+
+	-webkit-font-smoothing: antialiased;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: inline;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px,
+		rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
+	width: auto;
+}
+
+.geoPin:hover {
+	text-decoration: underline;
+}
+.geoPin svg {
+	font-size: 1.2em;
+	vertical-align: baseline;
+}
+.carousel .slide {
+	background: rgb(0, 156, 128);
+}
+.carousel .slide .profile img {
+	width: auto;
+}
+.carousel.carousel-slider {
+	height: 500px;
+}
+.carousel.carousel-slider button.control-arrow {
+	padding: 55px;
+}
+
+/* device specific css for mock-ups */
+.wireframe {
+	&.desktop-wide {
+		.geoPin,
+		.profile,
+		.pillWrap {
+			display: flex;
+			transform: scale(0.6, 0.6);
+		}
+	}
+}
