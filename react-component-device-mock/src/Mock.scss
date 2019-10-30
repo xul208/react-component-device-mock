@@ -1,3 +1,5 @@
+$ta-green: rgb(0, 156, 128);
+
 .mock {
 	position: relative;
 }
@@ -13,8 +15,11 @@
 .slide .deviceIcon {
 	display: none;
 }
+.thumb .horizontal {
+	transform: rotate(90deg);
+}
 .legend {
-	z-index: 2;
+	z-index: 3;
 }
 .pillWrap {
 	-webkit-font-smoothing: antialiased;
@@ -27,7 +32,7 @@
 	color: rgb(0, 0, 0);
 	cursor: pointer;
 	display: inline-block;
-	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	height: 50px;
@@ -53,7 +58,7 @@
 	color: rgb(51, 51, 51);
 	cursor: pointer;
 	display: inline-block;
-	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	height: 50px;
@@ -72,24 +77,20 @@
 }
 .profile {
 	-webkit-font-smoothing: antialiased;
-	bottom: 34px;
 	color: rgb(255, 255, 255);
 	cursor: pointer;
 	display: block;
-	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
 	font-size: 14px;
 	font-weight: bold;
-	height: 31px;
-	margin-right: -512px;
 	padding-bottom: 0px;
 	padding-left: 50px;
 	padding-right: 0px;
 	padding-top: 8px;
 	position: absolute;
-	right: 532.5px;
-	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px,
-		rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
-	width: 268.890625px;
+	right: calc(50% - 500px);
+	bottom: 1.5em;
+	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px, rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
 }
 .hero {
 	width: 100%;
@@ -122,15 +123,14 @@
 	color: rgb(255, 255, 255);
 	cursor: pointer;
 	display: block;
-	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	height: 42px;
 	left: 0px;
 	position: absolute;
 	margin-top: 5px;
-	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px,
-		rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
+	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px, rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
 	top: -2px;
 	width: 42px;
 }
@@ -139,7 +139,7 @@
 	color: rgb(0, 0, 0);
 	cursor: pointer;
 	display: inline-block;
-	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	height: 50px;
@@ -158,11 +158,13 @@
 	vertical-align: middle;
 	white-space: nowrap;
 }
-
+.chevronMock {
+	display: inline;
+}
 .chevronMock::before {
 	border-style: solid;
 	border-width: 0.15em 0.15em 0 0;
-	content: "";
+	content: '';
 	display: inline-block;
 	height: 0.5em;
 	left: 0.5em;
@@ -179,7 +181,7 @@
 }
 .extLinkIcon {
 	border-radius: 10px;
-	background: rgb(0, 156, 128);
+	background: rgba(0, 0, 0, 0.2);
 }
 .sponsoredBy {
 	font-weight: normal;
@@ -192,22 +194,22 @@
 }
 .heroSpr {
 	float: left;
+	display: flex;
 }
 .geoPin {
 	position: absolute;
-	left: 0.5em;
-	bottom: 0.5em;
+	left: calc(50% - 500px);
+	bottom: 1.5em;
 
 	-webkit-font-smoothing: antialiased;
 	color: rgb(255, 255, 255);
 	cursor: pointer;
 	display: inline;
-	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
+	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	height: auto;
-	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px,
-		rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
+	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px, rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
 	width: auto;
 }
 
@@ -219,7 +221,7 @@
 	vertical-align: baseline;
 }
 .carousel .slide {
-	background: rgb(0, 156, 128);
+	background: $ta-green;
 }
 .carousel .slide .profile img {
 	width: auto;
@@ -231,14 +233,305 @@
 	padding: 55px;
 }
 
+.desktop-narrow {
+	.pillWrap {
+		top: 70px;
+	}
+}
+.device-iphone-x.landscape {
+	transform: rotate(90deg);
+	bottom: 220px;
+	.device-content {
+		background-image: url('./horizontal.png');
+	}
+	.hero {
+		height: 250px;
+		width: 1462px;
+		margin-top: -6px;
+		margin-left: -840px;
+	}
+	.pillWrap {
+		left: -200px;
+		top: 90px;
+	}
+	.geoPin {
+		display: flex;
+		left: -450px;
+	}
+	.profile {
+		right: 100px;
+		.sprMore {
+			display: none;
+		}
+	}
+}
 /* device specific css for mock-ups */
 .wireframe {
 	&.desktop-wide {
 		.geoPin,
 		.profile,
 		.pillWrap {
-			display: flex;
-			transform: scale(0.6, 0.6);
+			transform: scale(0.4, 0.4);
 		}
+
+		.geoPin,
+		.profile {
+			bottom: -7px;
+		}
+
+		.geoPin {
+			left: calc(50% - 220px);
+		}
+		.profile {
+			right: calc(50% - 285px);
+		}
+		.pillWrap {
+			top: calc(50% - 13px);
+		}
+	}
+
+	&.mobile-wide-horizontal {
+		transform: rotate(-90deg);
+	}
+	&.mobile-narrow-horizontal,
+	&.mobile-narrow-vertical,
+	&.mobile-wide-vertical {
+		.hero {
+			height: 140px;
+			width: 768px;
+			margin-left: -200px;
+		}
+
+		.pillWrap {
+			width: 88.45px;
+			height: 28px;
+			padding: 0;
+			top: 43%;
+			left: calc(50% - 45px);
+			.pillText {
+				font-size: 12px;
+				height: 15px;
+				line-height: 15px;
+			}
+		}
+
+		.chevronMock::before {
+			border-width: 0.1em 0.1em 0 0;
+			height: 0.3em;
+			left: 0.15em;
+			top: 0.2em;
+			width: 0.3em;
+		}
+
+		.geoPin,
+		.profile {
+			bottom: 5px;
+			font-size: 11px;
+		}
+
+		.geoPin {
+			display: flex;
+			left: 7px;
+		}
+		.profile {
+			right: 10px;
+			.sprMore,
+			.avatar {
+				display: none;
+			}
+			.extLinkIcon {
+				background: $ta-green;
+			}
+		}
+		.pillWrap {
+			top: calc(50% - 13px);
+			left: 145px;
+		}
+	}
+	&.mobile-narrow-vertical {
+		.pillWrap {
+			left: 115px;
+		}
+	}
+	&.mobile-narrow-horizontal .pillWrap {
+		left: 195px;
+	}
+
+	&.ipad-horizontal,
+	&.ipad-vertical {
+		left: -440px;
+		&,
+		.hero {
+			height: 250px;
+			width: 1462px;
+		}
+		.geoPin {
+			font-size: 12px;
+			left: 450px;
+			bottom: 0.5em;
+		}
+		.profile {
+			bottom: 0.5em;
+			font-size: 12px;
+			right: 450px;
+			.avatar {
+				height: 36px;
+			}
+			.sprMore {
+				display: none;
+			}
+		}
+		.pillWrap {
+			left: 620px;
+			top: 100px;
+			display: flex;
+
+			.chevronMock::before {
+				vertical-align: baseline;
+			}
+		}
+	}
+	&.ipad-horizontal {
+		.pillWrap {
+			left: 700px;
+		}
+		.geoPin {
+			font-size: 14px;
+			left: 450px;
+		}
+		.profile {
+			font-size: 14px;
+			right: 265px;
+			.avatar {
+				height: 42px;
+			}
+		}
+	}
+}
+
+/* end of device specific css */
+
+.browser_body {
+	padding: 2em 3em;
+	min-height: 20em;
+	font-family: sans-serif;
+}
+
+.window_outline {
+	border: 3px solid rgba(120, 120, 120, 1);
+	border-radius: 5px;
+	box-shadow: 20px 20px 3px rgba(40, 40, 40, 0.2);
+	background-color: white;
+	color: #303442;
+}
+.window_head {
+	background: rgba(200, 200, 200, 1);
+	width: 100%;
+	height: 2.5em;
+	border-bottom: 3px solid rgba(120, 120, 120, 1);
+	display: flex;
+}
+
+.window_item {
+	align-self: center;
+	background: #fff;
+	width: 1em;
+	height: 1em;
+	border: 1px solid rgba(180, 180, 180, 1);
+}
+.circle {
+	border-radius: 50%;
+	margin-right: 0.6em;
+}
+.circle:first-child {
+	margin-left: 0.6em;
+}
+
+.address_bar {
+	border-radius: 3px;
+	flex: 1 1 10px;
+	max-width: 50%;
+	height: 1.3em;
+}
+
+.page_wrap {
+	width: 90%;
+	max-width: 70em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full_page_section {
+	width: 100%;
+	min-height: 100vh;
+	padding: 5em 0;
+	position: relative;
+	background-color: $ta-green;
+	color: #fff;
+}
+h2 {
+	font-size: 3vmax;
+}
+.mock_text {
+	border: 0;
+	border-radius: 3px;
+	width: 100%;
+	height: 1em;
+	background: rgb(230, 230, 230);
+	margin-bottom: 1em;
+	display: inline-block;
+}
+.mock_text:nth-child(odd) {
+	width: 90%;
+}
+.mock_text:nth-child(even) {
+	width: 70%;
+}
+.mock_text:last-child {
+	width: 30%;
+}
+
+/* badge */
+.badge {
+	margin: 6em 0;
+	padding: 1.2em 2em 2em 2em;
+	background: rgb(41, 41, 41);
+	display: inline-block;
+	color: #fff;
+	border: 3px solid rgb(80, 80, 80);
+	border-radius: 5px;
+}
+.badge h3 {
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+}
+.heart {
+	font-size: 2em;
+	animation: beat 2s linear infinite;
+}
+.clock {
+	font-size: 1.5em;
+	padding: 0 0.2em;
+}
+
+@keyframes beat {
+	0% {
+		color: white;
+		transform: scale(0.5);
+	}
+	50% {
+		color: #eb592c;
+		transform: scale(1);
+	}
+	100% {
+		color: white;
+		transform: scale(0.5);
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.browser_body {
+		padding: 0 1em;
 	}
 }
