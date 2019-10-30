@@ -1,21 +1,21 @@
-import React from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './device.css';
-import './marvel-device.scss';
-import { Carousel } from 'react-responsive-carousel';
-import Skeleton from 'react-loading-skeleton';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import fakeHeader from './fake-header.png';
-import ipadIcon from './ipad.png';
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./device.css";
+import "./marvel-device.scss";
+import { Carousel } from "react-responsive-carousel";
+import Skeleton from "react-loading-skeleton";
+import fakeHeader from "./fake-header.png";
+import ipadIcon from "./ipad.png";
 
-import Mock from './Mock';
+import Mock from "./Mock";
 
-const PREVIEW_HERO_KEY = 'preview_hero';
-const PREVIEW_LOGO_KEY = 'preview_logo';
+const PREVIEW_HERO_KEY = "preview_hero";
+const PREVIEW_LOGO_KEY = "preview_logo";
+const PREVIEW_GEO_KEY = "preview_geo";
+const PREVIEW_SPONSOR_KEY = "preview_sponsor";
 function PreviewCarousel() {
     return (
-        <Carousel infiniteLoop useKeyboardArrows autoPlay>
+        <Carousel infiniteLoop useKeyboardArrows>
             <div>
                 <div class="full_page_section">
                     <div class="page_wrap">
@@ -31,10 +31,19 @@ function PreviewCarousel() {
                             </div>
                             <div class="browser_body">
                                 <Mock
-                                    hero={sessionStorage.getItem(PREVIEW_HERO_KEY)}
-                                    logo={sessionStorage.getItem(PREVIEW_LOGO_KEY)}
-                                    name={'Dear sponsor'}
-                                    device={'desktop-narrow'}
+                                    hero={sessionStorage.getItem(
+                                        PREVIEW_HERO_KEY
+                                    )}
+                                    logo={sessionStorage.getItem(
+                                        PREVIEW_LOGO_KEY
+                                    )}
+                                    geo={sessionStorage.getItem(
+                                        PREVIEW_GEO_KEY
+                                    )}
+                                    name={sessionStorage.getItem(
+                                        PREVIEW_SPONSOR_KEY
+                                    )}
+                                    device={"desktop-narrow"}
                                 />
                                 <Skeleton count={10} />
                             </div>
@@ -44,8 +53,15 @@ function PreviewCarousel() {
                         <div class="badge">
                             <h3>
                                 Made With
-                                <i class="fa fa-heart heart" aria-hidden="true" /> +{' '}
-                                <i class="fa fa-clock-o clock" aria-hidden="true" />
+                                <i
+                                    class="fa fa-heart heart"
+                                    aria-hidden="true"
+                                />{" "}
+                                +{" "}
+                                <i
+                                    class="fa fa-clock-o clock"
+                                    aria-hidden="true"
+                                />
                             </h3>
                         </div>
                     </div>
@@ -54,6 +70,7 @@ function PreviewCarousel() {
                 <img
                     className="deviceIcon"
                     src="https://cdn0.iconfinder.com/data/icons/isuperuser-dark/512/679460-macbook_pro_osx_apple_laptop_notebook-512.png"
+                    alt="small desktop"
                 />
                 <p className="legend">Legend 1</p>
             </div>
@@ -64,13 +81,16 @@ function PreviewCarousel() {
                 <div className="device device-iphone-x">
                     <div className="device-frame">
                         <div className="device-content">
-                            <img src={fakeHeader} />
+                            <img src={fakeHeader} alt="header" />
                             <Mock
                                 hero={sessionStorage.getItem(PREVIEW_HERO_KEY)}
                                 logo={sessionStorage.getItem(PREVIEW_LOGO_KEY)}
-                                device={'mobile-wide-vertical'}
+                                geo={sessionStorage.getItem(PREVIEW_GEO_KEY)}
+                                name={sessionStorage.getItem(
+                                    PREVIEW_SPONSOR_KEY
+                                )}
+                                device={"mobile-wide-vertical"}
                                 wireframe
-                                name={'Dear sponsor'}
                             />
                             <Skeleton count={10} />
                         </div>
@@ -82,6 +102,7 @@ function PreviewCarousel() {
                     <div className="device-power" />
                 </div>
                 <img
+                    alt="iphonex-vertical"
                     className="deviceIcon"
                     src="https://cdn3.iconfinder.com/data/icons/iphone-x-line/512/iPhoneX-01-512.png"
                 />
@@ -97,9 +118,12 @@ function PreviewCarousel() {
                             <Mock
                                 hero={sessionStorage.getItem(PREVIEW_HERO_KEY)}
                                 logo={sessionStorage.getItem(PREVIEW_LOGO_KEY)}
-                                device={'mobile-wide-horizontal'}
+                                geo={sessionStorage.getItem(PREVIEW_GEO_KEY)}
+                                name={sessionStorage.getItem(
+                                    PREVIEW_SPONSOR_KEY
+                                )}
+                                device={"mobile-wide-horizontal"}
                                 wireframe
-                                name={'Dear sponsor'}
                             />
                         </div>
                     </div>
@@ -110,6 +134,7 @@ function PreviewCarousel() {
                     <div className="device-power" />
                 </div>
                 <img
+                    alt="iphonex-horizontal"
                     className="deviceIcon horizontal"
                     src="https://cdn3.iconfinder.com/data/icons/iphone-x-line/512/iPhoneX-01-512.png"
                 />
@@ -127,13 +152,14 @@ function PreviewCarousel() {
                     <div class="sensor" />
                     <div class="speaker" />
                     <div class="screen">
-                        <img src={fakeHeader} />
+                        <img alt="header" src={fakeHeader} />
                         <Mock
                             hero={sessionStorage.getItem(PREVIEW_HERO_KEY)}
                             logo={sessionStorage.getItem(PREVIEW_LOGO_KEY)}
-                            device={'mobile-narrow-vertical'}
+                            geo={sessionStorage.getItem(PREVIEW_GEO_KEY)}
+                            name={sessionStorage.getItem(PREVIEW_SPONSOR_KEY)}
+                            device={"mobile-narrow-vertical"}
                             wireframe
-                            name={'Dear sponsor'}
                         />
                         <Skeleton count={10} />
                     </div>
@@ -142,6 +168,7 @@ function PreviewCarousel() {
                 </div>
 
                 <img
+                    alt="iphone4s"
                     className="deviceIcon"
                     src="https://cdn3.iconfinder.com/data/icons/new-apple-product-solid/24/iphone_8_plus_front-512.png"
                 />
@@ -164,9 +191,10 @@ function PreviewCarousel() {
                         <Mock
                             hero={sessionStorage.getItem(PREVIEW_HERO_KEY)}
                             logo={sessionStorage.getItem(PREVIEW_LOGO_KEY)}
-                            device={'mobile-narrow-horizontal'}
+                            geo={sessionStorage.getItem(PREVIEW_GEO_KEY)}
+                            name={sessionStorage.getItem(PREVIEW_SPONSOR_KEY)}
+                            device={"mobile-narrow-horizontal"}
                             wireframe
-                            name={'Dear sponsor'}
                         />
                         <Skeleton count={10} />
                     </div>
@@ -175,6 +203,7 @@ function PreviewCarousel() {
                 </div>
 
                 <img
+                    alt="iphone4s-horizontal"
                     className="deviceIcon horizontal"
                     src="https://cdn3.iconfinder.com/data/icons/new-apple-product-solid/24/iphone_8_plus_front-512.png"
                 />
@@ -192,39 +221,45 @@ function PreviewCarousel() {
                         <Mock
                             hero={sessionStorage.getItem(PREVIEW_HERO_KEY)}
                             logo={sessionStorage.getItem(PREVIEW_LOGO_KEY)}
-                            name={'Dear sponsor'}
+                            geo={sessionStorage.getItem(PREVIEW_GEO_KEY)}
+                            name={sessionStorage.getItem(PREVIEW_SPONSOR_KEY)}
                             wireframe
-                            device={'ipad-vertical'}
+                            device={"ipad-vertical"}
                         />
                         <Skeleton count={10} />
                     </div>
                     <div class="home" />
                 </div>
 
-                <img className="deviceIcon" src={ipadIcon} />
+                <img className="deviceIcon" alt="ipad" src={ipadIcon} />
 
                 <p className="legend">Mobile phone: small screen</p>
             </div>
             <div>
-                <div class="section_title">
+                <div className="section_title">
                     <h3>Tablet (iPad Mini) Landscape</h3>
                 </div>
-                <div class="marvel-device ipad silver landscape">
-                    <div class="camera" />
-                    <div class="screen">
+                <div className="marvel-device ipad silver landscape">
+                    <div className="camera" />
+                    <div className="screen">
                         <Mock
                             hero={sessionStorage.getItem(PREVIEW_HERO_KEY)}
                             logo={sessionStorage.getItem(PREVIEW_LOGO_KEY)}
-                            name={'Dear sponsor'}
+                            geo={sessionStorage.getItem(PREVIEW_GEO_KEY)}
+                            name={sessionStorage.getItem(PREVIEW_SPONSOR_KEY)}
                             wireframe
-                            device={'ipad-horizontal'}
+                            device={"ipad-horizontal"}
                         />
                         <Skeleton count={10} />
                     </div>
-                    <div class="home" />
+                    <div className="home" />
                 </div>
 
-                <img className="deviceIcon horizontal" src={ipadIcon} />
+                <img
+                    alt="ipad-horizontal"
+                    className="deviceIcon horizontal"
+                    src={ipadIcon}
+                />
 
                 <p className="legend">Mobile phone: small screen</p>
             </div>

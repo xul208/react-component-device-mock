@@ -31,8 +31,8 @@ $ta-green: rgb(0, 156, 128);
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
 	color: rgb(0, 0, 0);
 	cursor: pointer;
-	display: inline-block;
-	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
+	display: flex;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	height: 50px;
@@ -43,7 +43,7 @@ $ta-green: rgb(0, 156, 128);
 	padding-right: 44px;
 	padding-top: 0px;
 	position: absolute;
-	top: 50%;
+	top: 100px;
 	left: calc(50% - 100px);
 }
 
@@ -58,7 +58,7 @@ $ta-green: rgb(0, 156, 128);
 	color: rgb(51, 51, 51);
 	cursor: pointer;
 	display: inline-block;
-	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	height: 50px;
@@ -80,7 +80,7 @@ $ta-green: rgb(0, 156, 128);
 	color: rgb(255, 255, 255);
 	cursor: pointer;
 	display: block;
-	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	padding-bottom: 0px;
@@ -88,13 +88,14 @@ $ta-green: rgb(0, 156, 128);
 	padding-right: 0px;
 	padding-top: 8px;
 	position: absolute;
-	right: calc(50% - 500px);
-	bottom: 1.5em;
-	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px, rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
+	right: 10px;
+	bottom: 5px;
+	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px,
+		rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
 }
 .hero {
 	width: 100%;
-	max-height: 250px;
+	height: 250px;
 }
 .avatar {
 	-webkit-font-smoothing: antialiased;
@@ -123,14 +124,15 @@ $ta-green: rgb(0, 156, 128);
 	color: rgb(255, 255, 255);
 	cursor: pointer;
 	display: block;
-	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	height: 42px;
 	left: 0px;
 	position: absolute;
 	margin-top: 5px;
-	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px, rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
+	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px,
+		rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
 	top: -2px;
 	width: 42px;
 }
@@ -139,7 +141,7 @@ $ta-green: rgb(0, 156, 128);
 	color: rgb(0, 0, 0);
 	cursor: pointer;
 	display: inline-block;
-	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	height: 50px;
@@ -160,11 +162,12 @@ $ta-green: rgb(0, 156, 128);
 }
 .chevronMock {
 	display: inline;
+	margin-top: 10px;
 }
 .chevronMock::before {
 	border-style: solid;
 	border-width: 0.15em 0.15em 0 0;
-	content: '';
+	content: "";
 	display: inline-block;
 	height: 0.5em;
 	left: 0.5em;
@@ -198,18 +201,19 @@ $ta-green: rgb(0, 156, 128);
 }
 .geoPin {
 	position: absolute;
-	left: calc(50% - 500px);
-	bottom: 1.5em;
+	left: 15px;
+	bottom: 5px;
 
 	-webkit-font-smoothing: antialiased;
 	color: rgb(255, 255, 255);
 	cursor: pointer;
 	display: inline;
-	font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
+	font-family: Arial, Tahoma, "Bitstream Vera Sans", sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	height: auto;
-	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px, rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
+	text-shadow: rgba(60, 60, 60, 0.8) 1px 1px 0px,
+		rgba(60, 60, 60, 0.8) 0px 0px 1px, rgba(60, 60, 60, 0.8) 2px 2px 5px;
 	width: auto;
 }
 
@@ -220,7 +224,7 @@ $ta-green: rgb(0, 156, 128);
 	font-size: 1.2em;
 	vertical-align: baseline;
 }
-.carousel .slide {
+.carousel.carousel-slider .slide {
 	background: $ta-green;
 }
 .carousel .slide .profile img {
@@ -233,16 +237,11 @@ $ta-green: rgb(0, 156, 128);
 	padding: 55px;
 }
 
-.desktop-narrow {
-	.pillWrap {
-		top: 70px;
-	}
-}
 .device-iphone-x.landscape {
 	transform: rotate(90deg);
 	bottom: 220px;
 	.device-content {
-		background-image: url('./horizontal.png');
+		background-image: url("./horizontal.png");
 	}
 	.hero {
 		height: 250px;
@@ -251,6 +250,7 @@ $ta-green: rgb(0, 156, 128);
 		margin-left: -840px;
 	}
 	.pillWrap {
+		display: flex;
 		left: -200px;
 		top: 90px;
 	}
@@ -287,11 +287,38 @@ $ta-green: rgb(0, 156, 128);
 		}
 		.pillWrap {
 			top: calc(50% - 13px);
+			display: flex;
+		}
+		.chevronMock {
+			margin-top: 10px;
+		}
+	}
+
+	&.desktop-narrow {
+		.chevronMock {
+			margin-top: 10px;
 		}
 	}
 
 	&.mobile-wide-horizontal {
 		transform: rotate(-90deg);
+		.chevronMock {
+			margin-top: 10px;
+		}
+		.heroSpr {
+			display: flex;
+		}
+	}
+	&.mobile-wide-vertical {
+		.pillText {
+			margin: 8px 8px 8px 10px;
+		}
+		.chevronMock {
+			margin: 5px 0 0 -8px;
+		}
+		.heroSpr {
+			display: flex;
+		}
 	}
 	&.mobile-narrow-horizontal,
 	&.mobile-narrow-vertical,
@@ -303,6 +330,7 @@ $ta-green: rgb(0, 156, 128);
 		}
 
 		.pillWrap {
+			display: flex;
 			width: 88.45px;
 			height: 28px;
 			padding: 0;
@@ -344,17 +372,32 @@ $ta-green: rgb(0, 156, 128);
 			}
 		}
 		.pillWrap {
+			display: flex;
 			top: calc(50% - 13px);
 			left: 145px;
 		}
 	}
 	&.mobile-narrow-vertical {
 		.pillWrap {
+			display: flex;
 			left: 115px;
+			.pillText {
+				margin: 7px 2px 0 9px;
+			}
+		}
+		.chevronMock {
+			margin: 0;
 		}
 	}
 	&.mobile-narrow-horizontal .pillWrap {
 		left: 195px;
+
+		.pillText {
+			margin: 8px 8px 3px 10px;
+		}
+		.chevronMock {
+			margin: -1px 0 0 -5px;
+		}
 	}
 
 	&.ipad-horizontal,
@@ -386,8 +429,11 @@ $ta-green: rgb(0, 156, 128);
 			top: 100px;
 			display: flex;
 
-			.chevronMock::before {
-				vertical-align: baseline;
+			.chevronMock {
+				margin-top: 0;
+				&::before {
+					vertical-align: baseline;
+				}
 			}
 		}
 	}
@@ -534,4 +580,9 @@ h2 {
 	.browser_body {
 		padding: 0 1em;
 	}
+}
+
+/* upload modal */
+.mb-3 {
+	margin-top: 10px;
 }
